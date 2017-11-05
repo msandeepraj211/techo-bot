@@ -1,0 +1,28 @@
+{
+  "name": "techo-hack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data-layer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narenderv7/techo-hack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/narenderv7/techo-hack/issues"
+  },
+  "homepage": "https://github.com/narenderv7/techo-hack#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "boom": "^7.1.1",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "mqtt": "^2.14.0",
+    "socket.io": "^2.0.4"
+  }
+}

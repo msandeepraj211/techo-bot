@@ -40,8 +40,8 @@ app.get('/facedetector/:id', function(req, res){
     }
     userInLine.push(id);
     console.log(id);
+    checkUserDetails(id);
     res.send(id);
-
 })
 
 app.get('/', function(req, res) {
@@ -50,6 +50,17 @@ app.get('/', function(req, res) {
          message: 'Server Running successfully'
      });
 })
+
+function checkUserDetails(id, cb) {
+  Data.getUserDetails(id).then((userDetails) => {
+    if(userDetails.length) {
+      io.emit('existingUser', userDetails[0]);
+    } else {
+      io.emit('newUser', {});
+    }
+  })
+}
+
 
 http.listen(PORT, () => {
   console.log(`started on port ${PORT}`);
